@@ -1,0 +1,292 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #2c3e50;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(135deg, #ffcccc 25%, #ff7f7f 100%);
+    padding: 30px;
+    border-bottom: 5px solid #c0392b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #a93226;
+    font-size: 3em;
+    font-style: italic;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+nav {
+    margin: 20px 0;
+    background-color: #e6ffe6;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #27ae60;
+    box-shadow: 0 0 15px rgba(39, 174, 96, 0.7);
+}
+
+.accordion {
+    margin: 20px;
+    display: block; /* Aseguramos que el acordeón esté visible */
+}
+
+.accordion-item {
+    background-color: #e6ffe6;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 20px;
+    cursor: pointer;
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
+}
+
+.accordion-header:hover {
+    background-color: #27ae60;
+}
+
+.accordion-content {
+    padding: 20px;
+    display: none; /* Ocultamos el contenido por defecto */
+    border: 1px solid #bdc3c7;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: #c0392b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.5em;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #fff;
+    }
+    100% {
+        text-shadow: 0 0 20px #ffcccc;
+    }
+}
+
+.investigate {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.investigate h2 {
+    color: #c0392b;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-item.active .accordion-header {
+    background-color: #a93226;
+}
+
+.accordion-item.active .accordion-content {
+    display: block; /* Mostramos el contenido del acordeón activo */
+}
+
+.accordion-content a {
+    color: #2980b9;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.accordion-content a:hover {
+    color: #c0392b;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #219150;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.video-container {
+    border: 5px solid #c0392b;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .accordion-header {
+        font-size: 1.2em;
+    }
+
+    .video-container {
+        margin: 10px;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.card {
+    background: #e6ffe6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #c0392b;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wishlist {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist h3 {
+    color: #c0392b;
+    text-align: center;
+}
+
+.wishlist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.wishlist li {
+    padding: 10px;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+::selection {
+    background: #c0392b;
+    color: white;
+}
